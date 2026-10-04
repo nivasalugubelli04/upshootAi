@@ -1,0 +1,201 @@
+.footer {
+  padding: var(--space-2xl) 0 var(--space-4xl);
+  background: transparent;
+}
+
+/* Large Rounded Footer Container Card (vs-epple signature) */
+.cardContainer {
+  background: #ECECEF;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-3xl);
+  padding: var(--space-3xl) var(--space-2xl) var(--space-2xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
+}
+
+/* Brand Column */
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  text-align: left;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: none;
+}
+
+.logoBadge {
+  background: #ffffff;
+  padding: 14px 28px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.brandLogoImg {
+  height: 80px;
+  max-height: 84px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+  transition: transform var(--duration-fast) var(--ease-out);
+}
+
+.brandLogoImg:hover {
+  transform: scale(1.02);
+}
+
+.brandIconBox {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  background: #111111;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brandIcon {
+  width: 18px;
+  height: 18px;
+}
+
+.brandText {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #111111;
+}
+
+.brandColon {
+  color: var(--text-muted);
+}
+
+.tagline {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 320px;
+}
+
+.contactEmailBox {
+  margin-top: 0.5rem;
+}
+
+.contactEmailLink {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111111;
+  text-decoration: none;
+}
+
+.contactEmailLink:hover {
+  text-decoration: underline;
+}
+
+/* Links Columns */
+.linksCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  text-align: left;
+}
+
+.columnTitle {
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.linksList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footerLink {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  text-align: left;
+  transition: color var(--duration-fast);
+}
+
+.footerLink:hover {
+  color: #111111;
+}
+
+/* Bottom Bar */
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-xl);
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.copyright {
+  margin: 0;
+}
+
+.statusIndicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.statusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #10B981;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .top {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+@media (max-width: 600px) {
+  .top {
+    grid-template-columns: 1fr;
+  }
+
+  .cardContainer {
+    padding: var(--space-xl) var(--space-lg);
+  }
+}

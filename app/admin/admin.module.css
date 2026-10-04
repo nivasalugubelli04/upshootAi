@@ -1,0 +1,300 @@
+.container {
+  min-height: 100vh;
+  background: #fbfbfd;
+  color: #111111;
+  font-family: var(--font-sans);
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e7;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.headerInner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brandArea {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoImg {
+  height: 70px;
+  max-height: 74px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  display: block;
+}
+
+.adminBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: #111111;
+  color: #ffffff;
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.content {
+  flex: 1;
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 2.5rem 1.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Auth Gate Card */
+.gateCard {
+  max-width: 440px;
+  margin: 4rem auto;
+  background: #ffffff;
+  border: 1px solid #e5e5e7;
+  border-radius: 28px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 48px -12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.gateTitle {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.gateSubtitle {
+  font-size: 0.875rem;
+  color: #6e6e73;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.pinInput {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  border: 1px solid #d1d1d6;
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  text-align: center;
+  font-weight: 700;
+  background: #fbfbfd;
+  color: #111111;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.pinInput:focus {
+  border-color: #0071e3;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(0, 113, 227, 0.15);
+}
+
+/* Dashboard Metrics Grid */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+
+.metricCard {
+  background: #ffffff;
+  border: 1px solid #e5e5e7;
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metricCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+}
+
+.metricLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6e6e73;
+}
+
+.metricVal {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #111111;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.metricMeta {
+  font-size: 0.8rem;
+  color: #86868b;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Tabs */
+.tabsContainer {
+  display: flex;
+  gap: 0.5rem;
+  border-bottom: 1px solid #e5e5e7;
+  padding-bottom: 0.75rem;
+  overflow-x: auto;
+}
+
+.tabBtn {
+  padding: 0.6rem 1.25rem;
+  border-radius: 9999px;
+  border: none;
+  background: #f5f5f7;
+  color: #555555;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.tabBtn:hover {
+  background: #e5e5e7;
+  color: #111111;
+}
+
+.tabBtnActive {
+  background: #111111 !important;
+  color: #ffffff !important;
+}
+
+/* Card Section */
+.cardSection {
+  background: #ffffff;
+  border: 1px solid #e5e5e7;
+  border-radius: 24px;
+  padding: 2rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  color: #111111;
+  letter-spacing: -0.02em;
+}
+
+/* Tables */
+.tableContainer {
+  width: 100%;
+  overflow-x: auto;
+  border: 1px solid #e5e5e7;
+  border-radius: 16px;
+}
+
+.dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.875rem;
+}
+
+.dataTable th {
+  background: #fafafc;
+  padding: 0.85rem 1.25rem;
+  font-weight: 600;
+  color: #6e6e73;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e5e5e7;
+}
+
+.dataTable td {
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #f0f0f2;
+  color: #111111;
+}
+
+.dataTable tr:last-child td {
+  border-bottom: none;
+}
+
+.dataTable tr:hover td {
+  background: #fafafc;
+}
+
+/* Code Preview Box */
+.terminalBox {
+  background: #111111;
+  color: #10b981;
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  border: 1px solid #222222;
+}
+
+@media (max-width: 768px) {
+  .headerInner {
+    height: 76px;
+    padding: 0 1rem;
+  }
+  .logoImg {
+    height: 52px;
+  }
+  .content {
+    padding: 1.5rem 1rem 3rem;
+  }
+}

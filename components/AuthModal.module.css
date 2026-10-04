@@ -1,0 +1,327 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--space-md);
+  animation: fadeIn var(--duration-fast) var(--ease-out);
+}
+
+.modal {
+  background: #FFFFFF;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-3xl);
+  padding: var(--space-2xl);
+  width: 100%;
+  max-width: 480px;
+  box-shadow: var(--shadow-float);
+  position: relative;
+  animation: scaleIn var(--duration-normal) var(--ease-out);
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: #F5F5F7;
+  border: 1px solid var(--border-default);
+  color: var(--text-secondary);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--duration-fast);
+}
+
+.closeBtn:hover {
+  background: #111111;
+  color: #ffffff;
+  border-color: #111111;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.authLogoBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 14px 28px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  margin-bottom: var(--space-md);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+
+.authLogoImg {
+  height: 76px;
+  max-height: 80px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.msg91Badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  color: #065f46;
+  padding: 0.3rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  width: fit-content;
+}
+
+.logoBox {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: #111111;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+}
+
+.title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #111111;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+/* Feedback Banners */
+.errorBanner {
+  background: #FEF2F2;
+  border: 1px solid #EF4444;
+  color: #991B1B;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: var(--space-md);
+}
+
+.successBanner {
+  background: #ECFDF5;
+  border: 1px solid #10B981;
+  color: #065F46;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: var(--space-md);
+}
+
+/* Options List */
+.optionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+/* Google Button */
+.googleBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.25rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #111111;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+  box-shadow: var(--shadow-sm);
+}
+
+.googleBtn:hover:not(:disabled) {
+  background: #F7F7F9;
+  border-color: #111111;
+  transform: translateY(-1px);
+}
+
+/* Method Option Cards */
+.methodBtn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1.25rem;
+  background: #F9F9FB;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #111111;
+  cursor: pointer;
+  transition: all var(--duration-fast);
+}
+
+.methodBtn:hover {
+  background: #FFFFFF;
+  border-color: #111111;
+  box-shadow: var(--shadow-sm);
+}
+
+.methodLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.methodIcon {
+  width: 20px;
+  height: 20px;
+  color: var(--text-secondary);
+}
+
+.methodArrow {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.5rem 0;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border-default);
+}
+
+/* Form inputs */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-align: left;
+}
+
+.label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #111111;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #F9F9FB;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  color: #111111;
+  transition: all var(--duration-fast);
+}
+
+.input:focus {
+  outline: none;
+  background: #FFFFFF;
+  border-color: #111111;
+  box-shadow: 0 0 0 2px rgba(17, 17, 17, 0.1);
+}
+
+.submitBtn {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  transition: color var(--duration-fast);
+}
+
+.backBtn:hover {
+  color: #111111;
+}
+
+/* Google Prompt Box */
+.googlePromptBox {
+  background: #F9F9FB;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-xl);
+  padding: 1.25rem;
+  margin-bottom: var(--space-md);
+  text-align: left;
+}
+
+.googlePromptHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: #111111;
+}
+
+.googlePromptDesc {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}

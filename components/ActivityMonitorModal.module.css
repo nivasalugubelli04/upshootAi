@@ -1,0 +1,263 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 17, 17, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal {
+  background: #ffffff;
+  border: 1px solid #e5e5e7;
+  border-radius: 28px;
+  width: 100%;
+  max-width: 680px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 2.25rem;
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.25);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.titleArea {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #111111;
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: #6e6e73;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.closeBtn {
+  background: #f5f5f7;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  color: #6e6e73;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  flex-shrink: 0;
+}
+
+.closeBtn:hover {
+  background: #e5e5e7;
+  color: #111111;
+}
+
+/* Status Grid */
+.statusGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.statusCard {
+  background: #fafafc;
+  border: 1px solid #e5e5e7;
+  border-radius: 18px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.statusLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6e6e73;
+}
+
+.statusVal {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111111;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.statusBadgeSuccess {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+}
+
+.statusBadgeInfo {
+  background: rgba(99, 102, 241, 0.1);
+  color: #4f46e5;
+}
+
+/* Verification Guide Tabs */
+.guideSection {
+  background: #111111;
+  color: #f5f5f7;
+  border-radius: 20px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.guideHeading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #a1a1aa;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.codeBox {
+  background: #1c1c1e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 0.875rem 1rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.78rem;
+  line-height: 1.55;
+  color: #38bdf8;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+/* Event List */
+.eventsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.sectionTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.eventCard {
+  background: #f5f5f7;
+  border: 1px solid #e5e5e7;
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.eventHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #6e6e73;
+}
+
+.eventName {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111111;
+}
+
+.eventDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.825rem;
+  color: #48484a;
+}
+
+.emptyEvents {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #fafafc;
+  border: 1px dashed #d1d1d6;
+  border-radius: 16px;
+  color: #6e6e73;
+  font-size: 0.875rem;
+}
+
+/* Actions footer */
+.modalActions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e5e5e7;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 640px) {
+  .statusGrid {
+    grid-template-columns: 1fr;
+  }
+  .modal {
+    padding: 1.5rem;
+    border-radius: 22px;
+  }
+}

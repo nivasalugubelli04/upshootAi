@@ -1,0 +1,135 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-md);
+  z-index: 100;
+  animation: fadeIn var(--duration-fast) var(--ease-out);
+}
+
+.modal {
+  background: #FFFFFF;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-3xl);
+  padding: var(--space-2xl);
+  width: 100%;
+  max-width: 460px;
+  box-shadow: var(--shadow-float);
+  position: relative;
+  animation: scaleIn var(--duration-normal) var(--ease-out);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  background: #F5F5F7;
+  border: 1px solid var(--border-default);
+  color: var(--text-secondary);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.closeBtn:hover {
+  background: #111111;
+  color: #ffffff;
+  border-color: #111111;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.iconCircle {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  background: #111111;
+  color: #ffffff;
+  border: 1px solid #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-md);
+}
+
+.title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #111111;
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  text-align: left;
+}
+
+.label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #111111;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: #F9F9FB;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  color: #111111;
+  transition: all var(--duration-fast);
+}
+
+.input:focus {
+  outline: none;
+  background: #FFFFFF;
+  border-color: #111111;
+  box-shadow: 0 0 0 2px rgba(17, 17, 17, 0.1);
+}
+
+.submitBtn {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.errorBanner {
+  background: #FEF2F2;
+  border: 1px solid #EF4444;
+  color: #991B1B;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  font-size: 0.8125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: var(--space-md);
+}

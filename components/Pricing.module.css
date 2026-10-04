@@ -1,0 +1,262 @@
+.pricing {
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-4xl);
+  background: transparent;
+  position: relative;
+}
+
+.header {
+  text-align: left;
+  max-width: 760px;
+  margin-bottom: var(--space-3xl);
+}
+
+.badgeWrapper {
+  margin-bottom: var(--space-md);
+}
+
+.title {
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-md);
+  color: #111111;
+  font-size: clamp(2rem, 3.8vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-xl);
+}
+
+/* Tabs (vs-epple Pill Bar) */
+.tabs {
+  display: inline-flex;
+  gap: 0.35rem;
+  background: #FFFFFF;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-full);
+  padding: 0.35rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-2xl);
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.35rem;
+  border-radius: var(--radius-full);
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.tab:hover {
+  color: #111111;
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.tabActive {
+  background: #111111;
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.tabActive:hover {
+  background: #222222;
+  color: #ffffff;
+}
+
+.tabBadge {
+  font-size: 0.7rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+}
+
+.tab:not(.tabActive) .tabBadge {
+  background: #EBEBEF;
+  color: var(--text-secondary);
+}
+
+/* Cards Grid */
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-xl);
+  align-items: stretch;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+/* Precision White Rounded Card (vs-epple style) */
+.card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-2xl) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all var(--duration-normal) var(--ease-out);
+  box-shadow: var(--shadow-sm);
+}
+
+.card:hover {
+  border-color: #111111;
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Featured Card with High-Contrast Highlight */
+.cardFeatured {
+  border: 2px solid #111111;
+  box-shadow: var(--shadow-md);
+}
+
+.cardFeatured:hover {
+  box-shadow: var(--shadow-float);
+}
+
+.popularBadge {
+  position: absolute;
+  top: -14px;
+  left: var(--space-xl);
+  background: #111111;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+}
+
+.popularDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #10B981;
+}
+
+.cardTop {
+  margin-bottom: var(--space-md);
+}
+
+.planName {
+  font-size: 0.8125rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.375rem;
+  margin-bottom: 0.5rem;
+}
+
+.price {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  font-weight: 800;
+  color: #111111;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.pricePeriod {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.headline {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.5;
+  min-height: 44px;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border-subtle);
+  margin: var(--space-md) 0 var(--space-lg);
+}
+
+.featList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+  margin-bottom: var(--space-xl);
+  flex: 1;
+}
+
+.featItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.featIcon {
+  width: 17px;
+  height: 17px;
+  color: #111111;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+.bestForBox {
+  background: #F5F5F7;
+  border-radius: var(--radius-md);
+  padding: 0.75rem 1rem;
+  margin-bottom: var(--space-lg);
+  font-size: 0.8125rem;
+}
+
+.bestForLabel {
+  font-weight: 700;
+  color: #111111;
+  display: block;
+  margin-bottom: 0.125rem;
+  text-transform: uppercase;
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
+}
+
+.bestForText {
+  color: var(--text-secondary);
+}
+
+.selectBtn {
+  width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+}
